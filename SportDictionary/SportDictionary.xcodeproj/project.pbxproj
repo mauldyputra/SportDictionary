@@ -20,7 +20,9 @@
 		8B24AC4A266DCDF90035204E /* PortalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24AC49266DCDF90035204E /* PortalVC.swift */; };
 		8B24AC4C266DCE350035204E /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24AC4B266DCE350035204E /* UserDefaultManager.swift */; };
 		8B24AC4E266DD9550035204E /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24AC4D266DD9550035204E /* MasterView.swift */; };
-		8B24AC50266DDA080035204E /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B24AC4F266DDA080035204E /* WalkthroughView.swift */; };
+		8B32D0D3266E02B600723948 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0D2266E02B600723948 /* R.generated.swift */; };
+		8B32D0D5266E068C00723948 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0D4266E068C00723948 /* WalkthroughView.swift */; };
+		8B32D0D7266E069C00723948 /* WalkthroughView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B32D0D6266E069C00723948 /* WalkthroughView.xib */; };
 		922DE95625A7F9412235BF33 /* libPods-SportDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A90E66D782B6EC35EC0B13DC /* libPods-SportDictionary.a */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +43,9 @@
 		8B24AC49266DCDF90035204E /* PortalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortalVC.swift; sourceTree = "<group>"; };
 		8B24AC4B266DCE350035204E /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		8B24AC4D266DD9550035204E /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
-		8B24AC4F266DDA080035204E /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		8B32D0D2266E02B600723948 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		8B32D0D4266E068C00723948 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
+		8B32D0D6266E069C00723948 /* WalkthroughView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughView.xib; sourceTree = "<group>"; };
 		A90E66D782B6EC35EC0B13DC /* libPods-SportDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE21D651F4708DA251661675 /* Pods-SportDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDictionary.debug.xcconfig"; path = "Target Support Files/Pods-SportDictionary/Pods-SportDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -78,6 +82,7 @@
 		8B24AC16266DB5B60035204E = {
 			isa = PBXGroup;
 			children = (
+				8B32D0D2266E02B600723948 /* R.generated.swift */,
 				8B24AC21266DB5B60035204E /* SportDictionary */,
 				8B24AC20266DB5B60035204E /* Products */,
 				3BB44141C68EA7D246D6F037 /* Pods */,
@@ -132,7 +137,8 @@
 				8B24AC44266DC8C70035204E /* NoConnectionViewController.xib */,
 				8B24AC49266DCDF90035204E /* PortalVC.swift */,
 				8B24AC4D266DD9550035204E /* MasterView.swift */,
-				8B24AC4F266DDA080035204E /* WalkthroughView.swift */,
+				8B32D0D4266E068C00723948 /* WalkthroughView.swift */,
+				8B32D0D6266E069C00723948 /* WalkthroughView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 			buildConfigurationList = 8B24AC33266DB5B70035204E /* Build configuration list for PBXNativeTarget "SportDictionary" */;
 			buildPhases = (
 				9AB03BE4D022E987D3D247D1 /* [CP] Check Pods Manifest.lock */,
+				8B32D0D1266DFF3600723948 /* ShellScript */,
 				8B24AC1B266DB5B60035204E /* Sources */,
 				8B24AC1C266DB5B60035204E /* Frameworks */,
 				8B24AC1D266DB5B60035204E /* Resources */,
@@ -216,12 +223,32 @@
 				8B24AC2F266DB5B70035204E /* LaunchScreen.storyboard in Resources */,
 				8B24AC2C266DB5B70035204E /* Assets.xcassets in Resources */,
 				8B24AC46266DC8C70035204E /* NoConnectionViewController.xib in Resources */,
+				8B32D0D7266E069C00723948 /* WalkthroughView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8B32D0D1266DFF3600723948 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		9AB03BE4D022E987D3D247D1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,7 +281,6 @@
 				8B24AC40266DC5690035204E /* ConstantsApi.swift in Sources */,
 				8B24AC23266DB5B60035204E /* AppDelegate.swift in Sources */,
 				8B24AC48266DCA1B0035204E /* Extensions.swift in Sources */,
-				8B24AC50266DDA080035204E /* WalkthroughView.swift in Sources */,
 				8B24AC25266DB5B60035204E /* SceneDelegate.swift in Sources */,
 				8B24AC4A266DCDF90035204E /* PortalVC.swift in Sources */,
 				8B24AC42266DC5750035204E /* ConstantsWarning.swift in Sources */,
@@ -262,6 +288,8 @@
 				8B24AC45266DC8C70035204E /* NoConnectionViewController.swift in Sources */,
 				8B24AC4E266DD9550035204E /* MasterView.swift in Sources */,
 				8B24AC3D266DC3B50035204E /* CoreApi.swift in Sources */,
+				8B32D0D3266E02B600723948 /* R.generated.swift in Sources */,
+				8B32D0D5266E068C00723948 /* WalkthroughView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

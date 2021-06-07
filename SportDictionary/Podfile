@@ -6,5 +6,6 @@ target 'SportDictionary' do
   pod 'FSPagerView'
   pod 'PageControls/PillPageControl'
   pod 'Gluten'
+  pod 'R.swift'
   
 end

@@ -3,12 +3,16 @@ PODS:
   - FSPagerView (0.8.3)
   - Gluten (0.2)
   - PageControls/PillPageControl (1.0.1)
+  - R.swift (5.4.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
 
 DEPENDENCIES:
   - Alamofire
   - FSPagerView
   - Gluten
   - PageControls/PillPageControl
+  - R.swift
 
 SPEC REPOS:
   trunk:
@@ -16,13 +20,17 @@ SPEC REPOS:
     - FSPagerView
     - Gluten
     - PageControls
+    - R.swift
+    - R.swift.Library
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
   FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   Gluten: bba2d3ddefb2cd35f9298a339bc47f0a4af8d12f
   PageControls: fc2436c93e79419521a6de5d46d84722593e2949
+  R.swift: c533450b0f7dc494e0993f5f1a1db925d84c3006
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
 
-PODFILE CHECKSUM: faff1cdf8e0b3d8aeb7f66c1a81bf1e7c1130dc3
+PODFILE CHECKSUM: 13257f6d89d179572e7c48a663d56db5ec78ee28
 
 COCOAPODS: 1.10.1
