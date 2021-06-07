@@ -4,6 +4,7 @@ target 'SportDictionary' do
   
   pod 'Alamofire'
   pod 'FSPagerView'
+  pod 'SnapKit'
   pod 'PageControls/PillPageControl'
   pod 'Gluten'
   pod 'R.swift'

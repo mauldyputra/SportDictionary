@@ -23,6 +23,11 @@
 		8B32D0D3266E02B600723948 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0D2266E02B600723948 /* R.generated.swift */; };
 		8B32D0D5266E068C00723948 /* WalkthroughView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0D4266E068C00723948 /* WalkthroughView.swift */; };
 		8B32D0D7266E069C00723948 /* WalkthroughView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B32D0D6266E069C00723948 /* WalkthroughView.xib */; };
+		8B32D0DB266E0B3700723948 /* WalkthroughCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0D9266E0B3700723948 /* WalkthroughCell.swift */; };
+		8B32D0DC266E0B3700723948 /* WalkthroughCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B32D0DA266E0B3700723948 /* WalkthroughCell.xib */; };
+		8B32D0DF266E1A9400723948 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0DE266E1A9400723948 /* Colors.swift */; };
+		8B32D0E1266E254100723948 /* WalkthroughViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0E0266E254100723948 /* WalkthroughViewController.swift */; };
+		8B32D0E3266E26FF00723948 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B32D0E2266E26FF00723948 /* MainViewController.swift */; };
 		922DE95625A7F9412235BF33 /* libPods-SportDictionary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A90E66D782B6EC35EC0B13DC /* libPods-SportDictionary.a */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,11 @@
 		8B32D0D2266E02B600723948 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		8B32D0D4266E068C00723948 /* WalkthroughView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughView.swift; sourceTree = "<group>"; };
 		8B32D0D6266E069C00723948 /* WalkthroughView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughView.xib; sourceTree = "<group>"; };
+		8B32D0D9266E0B3700723948 /* WalkthroughCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughCell.swift; sourceTree = "<group>"; };
+		8B32D0DA266E0B3700723948 /* WalkthroughCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WalkthroughCell.xib; sourceTree = "<group>"; };
+		8B32D0DE266E1A9400723948 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8B32D0E0266E254100723948 /* WalkthroughViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkthroughViewController.swift; sourceTree = "<group>"; };
+		8B32D0E2266E26FF00723948 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A90E66D782B6EC35EC0B13DC /* libPods-SportDictionary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SportDictionary.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE21D651F4708DA251661675 /* Pods-SportDictionary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportDictionary.debug.xcconfig"; path = "Target Support Files/Pods-SportDictionary/Pods-SportDictionary.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +111,7 @@
 		8B24AC21266DB5B60035204E /* SportDictionary */ = {
 			isa = PBXGroup;
 			children = (
+				8B32D0DD266E1A8500723948 /* Themes */,
 				8B24AC38266DBE750035204E /* Network */,
 				8B24AC3E266DC54A0035204E /* Utility */,
 				8B24AC39266DBE820035204E /* Support */,
@@ -133,12 +144,12 @@
 		8B24AC3A266DBE970035204E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8B32D0D8266E0B0C00723948 /* Walkthrough */,
 				8B24AC43266DC8C70035204E /* NoConnectionViewController.swift */,
 				8B24AC44266DC8C70035204E /* NoConnectionViewController.xib */,
 				8B24AC49266DCDF90035204E /* PortalVC.swift */,
 				8B24AC4D266DD9550035204E /* MasterView.swift */,
-				8B32D0D4266E068C00723948 /* WalkthroughView.swift */,
-				8B32D0D6266E069C00723948 /* WalkthroughView.xib */,
+				8B32D0E2266E26FF00723948 /* MainViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -159,6 +170,26 @@
 				8B24AC41266DC5750035204E /* ConstantsWarning.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		8B32D0D8266E0B0C00723948 /* Walkthrough */ = {
+			isa = PBXGroup;
+			children = (
+				8B32D0D4266E068C00723948 /* WalkthroughView.swift */,
+				8B32D0D6266E069C00723948 /* WalkthroughView.xib */,
+				8B32D0D9266E0B3700723948 /* WalkthroughCell.swift */,
+				8B32D0DA266E0B3700723948 /* WalkthroughCell.xib */,
+				8B32D0E0266E254100723948 /* WalkthroughViewController.swift */,
+			);
+			path = Walkthrough;
+			sourceTree = "<group>";
+		};
+		8B32D0DD266E1A8500723948 /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				8B32D0DE266E1A9400723948 /* Colors.swift */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +252,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B24AC2F266DB5B70035204E /* LaunchScreen.storyboard in Resources */,
+				8B32D0DC266E0B3700723948 /* WalkthroughCell.xib in Resources */,
 				8B24AC2C266DB5B70035204E /* Assets.xcassets in Resources */,
 				8B24AC46266DC8C70035204E /* NoConnectionViewController.xib in Resources */,
 				8B32D0D7266E069C00723948 /* WalkthroughView.xib in Resources */,
@@ -281,12 +313,16 @@
 				8B24AC40266DC5690035204E /* ConstantsApi.swift in Sources */,
 				8B24AC23266DB5B60035204E /* AppDelegate.swift in Sources */,
 				8B24AC48266DCA1B0035204E /* Extensions.swift in Sources */,
+				8B32D0DF266E1A9400723948 /* Colors.swift in Sources */,
 				8B24AC25266DB5B60035204E /* SceneDelegate.swift in Sources */,
 				8B24AC4A266DCDF90035204E /* PortalVC.swift in Sources */,
 				8B24AC42266DC5750035204E /* ConstantsWarning.swift in Sources */,
+				8B32D0E3266E26FF00723948 /* MainViewController.swift in Sources */,
 				8B24AC4C266DCE350035204E /* UserDefaultManager.swift in Sources */,
 				8B24AC45266DC8C70035204E /* NoConnectionViewController.swift in Sources */,
+				8B32D0E1266E254100723948 /* WalkthroughViewController.swift in Sources */,
 				8B24AC4E266DD9550035204E /* MasterView.swift in Sources */,
+				8B32D0DB266E0B3700723948 /* WalkthroughCell.swift in Sources */,
 				8B24AC3D266DC3B50035204E /* CoreApi.swift in Sources */,
 				8B32D0D3266E02B600723948 /* R.generated.swift in Sources */,
 				8B32D0D5266E068C00723948 /* WalkthroughView.swift in Sources */,

@@ -161,10 +161,14 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 1 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
   struct nib {
     /// Nib `NoConnectionViewController`.
     static let noConnectionViewController = _R.nib._NoConnectionViewController()
+    /// Nib `WalkthroughCell`.
+    static let walkthroughCell = _R.nib._WalkthroughCell()
+    /// Nib `WalkthroughView`.
+    static let walkthroughView = _R.nib._WalkthroughView()
 
     #if os(iOS) || os(tvOS)
     /// `UINib(name: "NoConnectionViewController", in: bundle)`
@@ -174,9 +178,41 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "WalkthroughCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.walkthroughCell) instead")
+    static func walkthroughCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.walkthroughCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "WalkthroughView", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.walkthroughView) instead")
+    static func walkthroughView(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.walkthroughView)
+    }
+    #endif
+
     static func noConnectionViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.noConnectionViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
+
+    static func walkthroughCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WalkthroughCell? {
+      return R.nib.walkthroughCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WalkthroughCell
+    }
+
+    static func walkthroughView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.walkthroughView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `WalkthroughCellIdentifier`.
+    static let walkthroughCellIdentifier: Rswift.ReuseIdentifier<WalkthroughCell> = Rswift.ReuseIdentifier(identifier: "WalkthroughCellIdentifier")
 
     fileprivate init() {}
   }
@@ -206,6 +242,31 @@ struct _R: Rswift.Validatable {
     struct _NoConnectionViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "NoConnectionViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _WalkthroughCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = WalkthroughCell
+
+      let bundle = R.hostingBundle
+      let identifier = "WalkthroughCellIdentifier"
+      let name = "WalkthroughCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WalkthroughCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? WalkthroughCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _WalkthroughView: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "WalkthroughView"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView

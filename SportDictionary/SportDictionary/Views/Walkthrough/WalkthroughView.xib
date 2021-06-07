@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WalkthroughView" customModule="SportDictionary" customModuleProvider="target">
+            <connections>
+                <outlet property="contentPagerView" destination="l7u-cV-bzD" id="2S8-kr-guK"/>
+                <outlet property="nextButton" destination="sQv-DE-Syo" id="Bgn-mc-nSm"/>
+                <outlet property="nextButtonWidth" destination="CbY-jY-7GH" id="DOu-pn-ald"/>
+                <outlet property="pageControl" destination="ufM-lP-FuP" id="eUY-5V-2o7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyK-xI-tcU">
+                    <rect key="frame" x="332" y="9" width="47" height="35"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="Lewati"/>
+                    <connections>
+                        <action selector="onSkipPressed:" destination="-1" eventType="touchUpInside" id="jNS-0s-EgL"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="l7u-cV-bzD" customClass="FSPagerView" customModule="FSPagerView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="759"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ufM-lP-FuP" customClass="PillPageControl" customModule="PageControls">
+                    <rect key="frame" x="36" y="815" width="120" height="6"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="nzP-MF-kCO"/>
+                        <constraint firstAttribute="height" constant="6" id="sQ7-LF-pJf"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQv-DE-Syo">
+                    <rect key="frame" x="330" y="838" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="CbY-jY-7GH"/>
+                        <constraint firstAttribute="height" constant="48" id="UzL-UO-dLW"/>
+                    </constraints>
+                    <state key="normal" title="Next"/>
+                    <connections>
+                        <action selector="onNextButtonPressed:" destination="-1" eventType="touchUpInside" id="Ylh-0w-sgp"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="ufM-lP-FuP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="36" id="Bfd-PY-AOd"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sQv-DE-Syo" secondAttribute="trailing" constant="36" id="Gz3-br-Gy2"/>
+                <constraint firstItem="ufM-lP-FuP" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" constant="-41" id="JBz-BB-Ek7"/>
+                <constraint firstItem="l7u-cV-bzD" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="MqE-y7-DMd"/>
+                <constraint firstItem="l7u-cV-bzD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Sdz-JM-405"/>
+                <constraint firstItem="l7u-cV-bzD" firstAttribute="top" secondItem="EyK-xI-tcU" secondAttribute="bottom" id="WjO-5n-YcF"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="EyK-xI-tcU" secondAttribute="trailing" constant="35" id="gSx-cy-K3A"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="sQv-DE-Syo" secondAttribute="bottom" constant="-24" id="oWf-Hv-akf"/>
+                <constraint firstItem="sQv-DE-Syo" firstAttribute="top" secondItem="l7u-cV-bzD" secondAttribute="bottom" priority="750" constant="35" id="r4C-yJ-dlD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="l7u-cV-bzD" secondAttribute="trailing" id="ywL-ia-hIC"/>
+                <constraint firstItem="EyK-xI-tcU" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-35" id="zY5-5W-MeD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="79.710144927536234" y="108.48214285714285"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

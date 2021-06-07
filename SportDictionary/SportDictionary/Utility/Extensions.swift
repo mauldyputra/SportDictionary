@@ -41,6 +41,20 @@ extension UIView {
             }
         }
     }
+    
+    func addDropShadow(shadowColor: CGColor = UIColor.black.cgColor, shadowOffset: CGSize = CGSize(width: 0, height: 2), shadowOpacity: Float = 0.22, shadowRadius: CGFloat = 1.5){
+        layer.shadowColor = shadowColor
+        layer.shadowOffset = shadowOffset
+        layer.shadowRadius = shadowRadius
+        layer.shadowOpacity = shadowOpacity
+        //        layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: shadowRadius).cgPath
+        if layer.cornerRadius == 0 {
+            layer.cornerRadius = 10
+        }
+        layer.masksToBounds = false
+        
+        backgroundColor = .white
+    }
 }
 
 extension UIApplication {
@@ -50,7 +64,7 @@ extension UIApplication {
             let top = topViewController(nav.visibleViewController)
             return top
         }
-
+        
         if let tab = base as? UITabBarController
         {
             if let selected = tab.selectedViewController
@@ -59,7 +73,7 @@ extension UIApplication {
                 return top
             }
         }
-
+        
         if let presented = base?.presentedViewController
         {
             let top = topViewController(presented)
@@ -67,5 +81,10 @@ extension UIApplication {
         }
         return base
     }
+}
 
+extension UIColor {
+    static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) -> UIColor {
+        return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
+    }
 }
