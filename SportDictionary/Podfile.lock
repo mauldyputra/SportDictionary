@@ -1,16 +1,28 @@
 PODS:
   - Alamofire (5.4.3)
+  - FSPagerView (0.8.3)
+  - Gluten (0.2)
+  - PageControls/PillPageControl (1.0.1)
 
 DEPENDENCIES:
   - Alamofire
+  - FSPagerView
+  - Gluten
+  - PageControls/PillPageControl
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - FSPagerView
+    - Gluten
+    - PageControls
 
 SPEC CHECKSUMS:
   Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
+  Gluten: bba2d3ddefb2cd35f9298a339bc47f0a4af8d12f
+  PageControls: fc2436c93e79419521a6de5d46d84722593e2949
 
-PODFILE CHECKSUM: 69016a64825dfe9a553df4ea9145db030150be8b
+PODFILE CHECKSUM: faff1cdf8e0b3d8aeb7f66c1a81bf1e7c1130dc3
 
 COCOAPODS: 1.10.1
