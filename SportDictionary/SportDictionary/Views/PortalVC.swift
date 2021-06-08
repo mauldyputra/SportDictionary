@@ -20,19 +20,19 @@ class PortalVC: UIViewController {
     
     func checkSession(){
         if (UserDefaultManager.instance.walkthroughShown) {
-//            goToHomePage()
+            goToHomePage()
         } else {
-//            goToWalkthrough()
+            goToWalkthrough()
         }
     }
     
-//    func goToHomePage() {
-//        let homeVC = MainViewController()
-//        navigationController?.pushViewController(homeVC, animated: false)
-//    }
+    func goToHomePage() {
+        let homeVC = MainViewController()
+        navigationController?.pushViewController(homeVC, animated: false)
+    }
     
-//    func goToWalkthrough(){
-//        let walkthroughVC = WalkthroughViewController()
-//        navigationController?.pushViewController(walkthroughVC, animated: false)
-//    }
+    func goToWalkthrough(){
+        let walkthroughVC = WalkthroughViewController()
+        navigationController?.pushViewController(walkthroughVC, animated: false)
+    }
 }

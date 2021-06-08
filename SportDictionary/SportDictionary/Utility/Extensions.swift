@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 extension UIView {
     @IBInspectable var cornerRadius: CGFloat {
@@ -86,5 +87,32 @@ extension UIApplication {
 extension UIColor {
     static func rgb(red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat = 1) -> UIColor {
         return UIColor(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
+    }
+}
+
+extension UIImageView {
+    func loadImage(link: String, placeholderImage: UIImage? = nil) {
+        guard !link.isEmpty else {
+            return
+        }
+        
+        var originalUrl :String = link
+        if (!originalUrl.contains("%20")) {
+            originalUrl = link.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        }
+        if (!originalUrl.contains("%40")) {
+            originalUrl = link.replacingOccurrences(of: "%40", with: "@")
+        }
+        load(link: originalUrl, placeholderImage: placeholderImage)
+    }
+    
+    func load(link: String, placeholderImage: UIImage? = nil) {
+        if let pholderImage = placeholderImage {
+            self.image = pholderImage
+        }
+        if let linkURL = URL(string: link) {
+            self.sd_imageTransition = .fade
+            self.sd_setImage(with: linkURL, placeholderImage: placeholderImage, options: [.scaleDownLargeImages, .refreshCached], completed: nil)
+        }
     }
 }

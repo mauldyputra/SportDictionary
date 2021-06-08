@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="profileCellHeaderIdentifier" id="KGk-i7-Jjw" customClass="ProfileHeaderCell" customModule="SportDictionary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="260"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mauldy Putra Pratama" translatesAutoresizingMaskIntoConstraints="NO" id="RvS-oI-LIa">
+                        <rect key="frame" x="164" y="41" width="86" height="86"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="RvS-oI-LIa" secondAttribute="height" multiplier="1:1" id="0bg-X3-Rsf"/>
+                            <constraint firstAttribute="width" constant="86" id="Llb-ph-Ydk"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mauldy Putra Pratama" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hau-gn-IsA">
+                        <rect key="frame" x="36" y="157" width="342" height="19.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mauldyputra@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0aN-Do-JjU">
+                        <rect key="frame" x="36" y="191.5" width="342" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Hau-gn-IsA" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="3i9-Gd-nSw"/>
+                    <constraint firstItem="0aN-Do-JjU" firstAttribute="leading" secondItem="Hau-gn-IsA" secondAttribute="leading" id="DpY-9C-5z7"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="Hau-gn-IsA" secondAttribute="trailing" constant="16" id="P7W-lX-Cyh"/>
+                    <constraint firstItem="Hau-gn-IsA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="16" id="Swz-Cn-B9z"/>
+                    <constraint firstItem="RvS-oI-LIa" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Uv5-F0-cbQ"/>
+                    <constraint firstItem="0aN-Do-JjU" firstAttribute="top" secondItem="Hau-gn-IsA" secondAttribute="bottom" constant="15" id="UzJ-9v-Hn0"/>
+                    <constraint firstItem="Hau-gn-IsA" firstAttribute="top" secondItem="RvS-oI-LIa" secondAttribute="bottom" constant="30" id="ijj-ad-iUq"/>
+                    <constraint firstItem="RvS-oI-LIa" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="kVc-se-Ukt"/>
+                    <constraint firstItem="0aN-Do-JjU" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="nQa-ov-piH"/>
+                    <constraint firstItem="0aN-Do-JjU" firstAttribute="trailing" secondItem="Hau-gn-IsA" secondAttribute="trailing" id="sYr-3D-pO2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="profileImage" destination="RvS-oI-LIa" id="syh-Rg-GOd"/>
+            </connections>
+            <point key="canvasLocation" x="16" y="109"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Mauldy Putra Pratama" width="1008" height="1344"/>
+    </resources>
+</document>

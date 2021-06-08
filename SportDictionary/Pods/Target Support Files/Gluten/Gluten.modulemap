@@ -1,4 +1,4 @@
-module Gluten {
+framework module Gluten {
   umbrella header "Gluten-umbrella.h"
 
   export *

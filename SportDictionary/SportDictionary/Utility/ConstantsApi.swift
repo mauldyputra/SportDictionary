@@ -14,4 +14,8 @@ struct ConstantsApi{
     static let LIST_ALL_SPORTS = "\(API_BASE)/all_sports.php"
     static let LIST_ALL_LEAGUES = "\(API_BASE)/all_leagues.php"
     static let LIST_ALL_COUNTRIES = "\(API_BASE)/all_countries.php"
+    
+    static func getBaseApi() -> String {
+        return ConstantsApi.API_BASE
+    }
 }

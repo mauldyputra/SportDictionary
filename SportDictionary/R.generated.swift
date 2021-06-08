@@ -130,6 +130,21 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
+  /// This `R.image` struct is generated, and contains static references to 1 images.
+  struct image {
+    /// Image `Mauldy Putra Pratama`.
+    static let mauldyPutraPratama = Rswift.ImageResource(bundle: R.hostingBundle, name: "Mauldy Putra Pratama")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "Mauldy Putra Pratama", bundle: ..., traitCollection: ...)`
+    static func mauldyPutraPratama(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.mauldyPutraPratama, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {
@@ -161,20 +176,70 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.nib` struct is generated, and contains static references to 3 nibs.
+  /// This `R.nib` struct is generated, and contains static references to 8 nibs.
   struct nib {
+    /// Nib `HomeCell`.
+    static let homeCell = _R.nib._HomeCell()
+    /// Nib `HomeViewController`.
+    static let homeViewController = _R.nib._HomeViewController()
     /// Nib `NoConnectionViewController`.
     static let noConnectionViewController = _R.nib._NoConnectionViewController()
+    /// Nib `ProfileCellMenu`.
+    static let profileCellMenu = _R.nib._ProfileCellMenu()
+    /// Nib `ProfileHeaderCell`.
+    static let profileHeaderCell = _R.nib._ProfileHeaderCell()
+    /// Nib `SportsDetailVC`.
+    static let sportsDetailVC = _R.nib._SportsDetailVC()
     /// Nib `WalkthroughCell`.
     static let walkthroughCell = _R.nib._WalkthroughCell()
     /// Nib `WalkthroughView`.
     static let walkthroughView = _R.nib._WalkthroughView()
 
     #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HomeCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeCell) instead")
+    static func homeCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "HomeViewController", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.homeViewController) instead")
+    static func homeViewController(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.homeViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UINib(name: "NoConnectionViewController", in: bundle)`
     @available(*, deprecated, message: "Use UINib(resource: R.nib.noConnectionViewController) instead")
     static func noConnectionViewController(_: Void = ()) -> UIKit.UINib {
       return UIKit.UINib(resource: R.nib.noConnectionViewController)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ProfileCellMenu", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.profileCellMenu) instead")
+    static func profileCellMenu(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.profileCellMenu)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "ProfileHeaderCell", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.profileHeaderCell) instead")
+    static func profileHeaderCell(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.profileHeaderCell)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UINib(name: "SportsDetailVC", in: bundle)`
+    @available(*, deprecated, message: "Use UINib(resource: R.nib.sportsDetailVC) instead")
+    static func sportsDetailVC(_: Void = ()) -> UIKit.UINib {
+      return UIKit.UINib(resource: R.nib.sportsDetailVC)
     }
     #endif
 
@@ -194,8 +259,28 @@ struct R: Rswift.Validatable {
     }
     #endif
 
+    static func homeCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeCell? {
+      return R.nib.homeCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeCell
+    }
+
+    static func homeViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.homeViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
     static func noConnectionViewController(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
       return R.nib.noConnectionViewController.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    }
+
+    static func profileCellMenu(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileCellMenu? {
+      return R.nib.profileCellMenu.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileCellMenu
+    }
+
+    static func profileHeaderCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileHeaderCell? {
+      return R.nib.profileHeaderCell.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileHeaderCell
+    }
+
+    static func sportsDetailVC(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+      return R.nib.sportsDetailVC.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
     }
 
     static func walkthroughCell(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> WalkthroughCell? {
@@ -209,10 +294,16 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 4 reuse identifiers.
   struct reuseIdentifier {
+    /// Reuse identifier `HomeCellIdentifier`.
+    static let homeCellIdentifier: Rswift.ReuseIdentifier<HomeCell> = Rswift.ReuseIdentifier(identifier: "HomeCellIdentifier")
     /// Reuse identifier `WalkthroughCellIdentifier`.
     static let walkthroughCellIdentifier: Rswift.ReuseIdentifier<WalkthroughCell> = Rswift.ReuseIdentifier(identifier: "WalkthroughCellIdentifier")
+    /// Reuse identifier `profileCellHeaderIdentifier`.
+    static let profileCellHeaderIdentifier: Rswift.ReuseIdentifier<ProfileHeaderCell> = Rswift.ReuseIdentifier(identifier: "profileCellHeaderIdentifier")
+    /// Reuse identifier `profileCellMenuIdentifier`.
+    static let profileCellMenuIdentifier: Rswift.ReuseIdentifier<ProfileCellMenu> = Rswift.ReuseIdentifier(identifier: "profileCellMenuIdentifier")
 
     fileprivate init() {}
   }
@@ -233,15 +324,92 @@ struct R: Rswift.Validatable {
 struct _R: Rswift.Validatable {
   static func validate() throws {
     #if os(iOS) || os(tvOS)
+    try nib.validate()
+    #endif
+    #if os(iOS) || os(tvOS)
     try storyboard.validate()
     #endif
   }
 
   #if os(iOS) || os(tvOS)
-  struct nib {
+  struct nib: Rswift.Validatable {
+    static func validate() throws {
+      try _ProfileHeaderCell.validate()
+    }
+
+    struct _HomeCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = HomeCell
+
+      let bundle = R.hostingBundle
+      let identifier = "HomeCellIdentifier"
+      let name = "HomeCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> HomeCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? HomeCell
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _HomeViewController: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "HomeViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
     struct _NoConnectionViewController: Rswift.NibResourceType {
       let bundle = R.hostingBundle
       let name = "NoConnectionViewController"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _ProfileCellMenu: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ProfileCellMenu
+
+      let bundle = R.hostingBundle
+      let identifier = "profileCellMenuIdentifier"
+      let name = "ProfileCellMenu"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileCellMenu? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileCellMenu
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _ProfileHeaderCell: Rswift.NibResourceType, Rswift.ReuseIdentifierType, Rswift.Validatable {
+      typealias ReusableType = ProfileHeaderCell
+
+      let bundle = R.hostingBundle
+      let identifier = "profileCellHeaderIdentifier"
+      let name = "ProfileHeaderCell"
+
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProfileHeaderCell? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProfileHeaderCell
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "Mauldy Putra Pratama", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'Mauldy Putra Pratama' is used in nib 'ProfileHeaderCell', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+      }
+
+      fileprivate init() {}
+    }
+
+    struct _SportsDetailVC: Rswift.NibResourceType {
+      let bundle = R.hostingBundle
+      let name = "SportsDetailVC"
 
       func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
         return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView

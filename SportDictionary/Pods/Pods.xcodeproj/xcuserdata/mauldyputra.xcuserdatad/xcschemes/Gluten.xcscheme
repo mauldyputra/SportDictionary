@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "010956D970006CF8ED443365CAA71DFE"
-               BuildableName = "libGluten.a"
+               BuildableName = "Gluten.framework"
                BlueprintName = "Gluten"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

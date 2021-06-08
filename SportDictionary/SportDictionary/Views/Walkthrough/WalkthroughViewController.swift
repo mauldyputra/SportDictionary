@@ -46,8 +46,8 @@ class WalkthroughViewController: UIViewController {
     
     func goToHome() {
         UserDefaultManager.instance.walkthroughShown = true
-//        let homeVC = MainViewController()
-//        navigationController?.pushViewController(homeVC, animated: true)
+        let homeVC = MainViewController()
+        navigationController?.pushViewController(homeVC, animated: true)
     }
     
 }

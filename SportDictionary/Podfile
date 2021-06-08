@@ -1,12 +1,22 @@
-platform :ios, '11.0'
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '11.0'
+
+use_frameworks!
+def shared_pods
+    pod 'Alamofire'
+    pod 'SDWebImage'
+    pod 'SnapKit'
+    pod 'IGListKit'
+    pod 'FSPagerView'
+    pod 'Parchment'
+    pod 'Gluten'
+    pod 'NVActivityIndicatorView', '4.8.0'
+    pod 'R.swift'
+    pod 'PageControls/PillPageControl'
+    pod 'CRRefresh'
+    pod 'SkeletonView'
+end
 
 target 'SportDictionary' do
-  
-  pod 'Alamofire'
-  pod 'FSPagerView'
-  pod 'SnapKit'
-  pod 'PageControls/PillPageControl'
-  pod 'Gluten'
-  pod 'R.swift'
-  
+    shared_pods
 end

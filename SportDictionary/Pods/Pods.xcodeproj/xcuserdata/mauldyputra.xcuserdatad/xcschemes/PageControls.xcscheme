@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4DBE4798C7A8CEB1FBEDC3AA3FA8858C"
-               BuildableName = "libPageControls.a"
+               BuildableName = "PageControls.framework"
                BlueprintName = "PageControls"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

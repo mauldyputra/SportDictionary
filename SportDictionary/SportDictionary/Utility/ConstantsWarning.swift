@@ -13,4 +13,6 @@ struct ConstantsWarning {
     
     static let TITLE_CONNECTION_FAILURE = "Masalah Koneksi"
     static let MESSAGE_CONNECTION_FAILURE = "Gagal terhubung ke internet"
+    
+    static let ERROR_TECHNICAL = "Terjadi kesalahan teknis"
 }
