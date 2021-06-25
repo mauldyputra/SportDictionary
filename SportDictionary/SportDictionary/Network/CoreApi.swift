@@ -88,8 +88,8 @@ class CoreApi: NSObject {
     }
     
     
-        public func server(with api: String) -> String {
-            let serverURL = "\(ConstantsApi.getBaseApi())\(api)"
-            return serverURL
-        }
+    public func server(with api: String) -> String {
+        let serverURL = "\(ConstantsApi.getBaseApi())\(api)"
+        return serverURL
+    }
 }
